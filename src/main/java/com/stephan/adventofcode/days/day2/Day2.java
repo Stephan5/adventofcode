@@ -1,8 +1,8 @@
 package com.stephan.adventofcode.days.day2;
 
-import com.stephan.adventofcode.days.AbstractDay;
+import com.stephan.adventofcode.days.Day;
 
-public class Day2 extends AbstractDay {
+public class Day2 implements Day {
 
   @Override
   public int day() {

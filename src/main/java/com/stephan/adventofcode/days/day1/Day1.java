@@ -1,8 +1,8 @@
 package com.stephan.adventofcode.days.day1;
 
-import com.stephan.adventofcode.days.AbstractDay;
+import com.stephan.adventofcode.days.Day;
 
-public class Day1 extends AbstractDay {
+public class Day1 implements Day {
   private final SonarSweep sweep;
 
   public Day1() {

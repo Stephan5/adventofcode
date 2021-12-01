@@ -1,6 +1,6 @@
 package com.stephan.adventofcode;
 
-import com.stephan.adventofcode.days.AbstractDay;
+import com.stephan.adventofcode.days.Day;
 import com.stephan.adventofcode.days.day1.Day1;
 import com.stephan.adventofcode.days.day2.Day2;
 import java.lang.reflect.InvocationTargetException;
@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Mainline {
 
-  private static final List<Class<? extends AbstractDay>> days = List.of(
+  private static final List<Class<? extends Day>> days = List.of(
       Day1.class,
       Day2.class
   );
@@ -18,9 +18,9 @@ public class Mainline {
     System.out.println("             Advent of Code 2021");
     System.out.println("----------------------------------------------");
 
-    for (Class<? extends AbstractDay> day : days) {
+    for (Class<? extends Day> day : days) {
       try {
-        AbstractDay abstractDay = day.getDeclaredConstructor().newInstance();
+        Day abstractDay = day.getDeclaredConstructor().newInstance();
         abstractDay.day();
         System.out.println();
         System.out.printf("Day %s%n", abstractDay.day());
