@@ -7,6 +7,11 @@ import java.util.List;
 
 public class Main {
 
+  private static final List<Class<? extends DailyChallenge>> advent2020 = List.of(
+      com.stephan.adventofcode.y2020.day1.Day1.class,
+      com.stephan.adventofcode.y2020.day2.Day2.class
+  );
+
   private static final List<Class<? extends DailyChallenge>> advent2021 = List.of(
       Day1.class,
       Day2.class
@@ -16,6 +21,11 @@ public class Main {
     System.out.println("----------------------------------------------");
     System.out.println("                Advent of Code                ");
     System.out.println("----------------------------------------------");
+
+    System.out.println();
+    System.out.println("-------------------  2020  -------------------");
+
+    advent2020.forEach(Main::printResultsForDay);
 
     System.out.println();
     System.out.println("-------------------  2021  -------------------");

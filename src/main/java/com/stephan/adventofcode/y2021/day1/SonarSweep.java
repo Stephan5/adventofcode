@@ -9,17 +9,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 class SonarSweep {
 
-  private final List<Integer> sweepList;
-
-  SonarSweep() {
-    this.sweepList = getInput();
-  }
-
-  int countIncreases() {
+  int countIncreases(List<Integer> sweepList) {
     return countListIncreases(sweepList);
   }
 
-  int countWindowedIncreases() {
+  int countWindowedIncreases(List<Integer> sweepList) {
     return countListIncreases(sumOverWindow(sweepList));
   }
 

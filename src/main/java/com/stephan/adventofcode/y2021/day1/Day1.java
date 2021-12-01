@@ -21,11 +21,11 @@ public class Day1 implements DailyChallenge {
 
   @Override
   public int part1Result() {
-    return sweep.countIncreases();
+    return sweep.countIncreases(getInputAsIntegerList());
   }
 
   @Override
   public int part2Result() {
-    return sweep.countWindowedIncreases();
+    return sweep.countWindowedIncreases(getInputAsIntegerList());
   }
 }
