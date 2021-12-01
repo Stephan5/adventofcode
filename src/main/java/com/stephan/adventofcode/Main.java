@@ -1,34 +1,36 @@
 package com.stephan.adventofcode;
 
-import com.stephan.adventofcode.days.Day;
-import com.stephan.adventofcode.days.day1.Day1;
-import com.stephan.adventofcode.days.day2.Day2;
+import com.stephan.adventofcode.y2021.day1.Day1;
+import com.stephan.adventofcode.y2021.day2.Day2;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 public class Main {
 
-  private static final List<Class<? extends Day>> days = List.of(
+  private static final List<Class<? extends DailyChallenge>> advent2021 = List.of(
       Day1.class,
       Day2.class
   );
 
   public static void main(String[] args) {
     System.out.println("----------------------------------------------");
-    System.out.println("             Advent of Code 2021              ");
+    System.out.println("                Advent of Code                ");
     System.out.println("----------------------------------------------");
 
-    days.forEach(Main::printResultsForDay);
+    System.out.println();
+    System.out.println("-------------------  2021  -------------------");
+
+    advent2021.forEach(Main::printResultsForDay);
   }
 
-  private static void printResultsForDay(Class<? extends Day> day) {
+  private static void printResultsForDay(Class<? extends DailyChallenge> day) {
     try {
-      Day abstractDay = day.getDeclaredConstructor().newInstance();
+      DailyChallenge dailyChallenge = day.getDeclaredConstructor().newInstance();
       System.out.println();
-      System.out.printf("Day %s%n", abstractDay.day());
+      System.out.printf("Day %s%n", dailyChallenge.day());
       System.out.println("------");
-      System.out.println("Part 1 answer -> " + abstractDay.part1Result());
-      System.out.println("Part 2 answer -> " + abstractDay.part2Result());
+      System.out.println("Part 1 answer -> " + dailyChallenge.part1Result());
+      System.out.println("Part 2 answer -> " + dailyChallenge.part2Result());
       System.out.println("----------------------------------------------");
     } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
       throw new RuntimeException("Failed when attempting to instantiate an AbstractDay class", e);

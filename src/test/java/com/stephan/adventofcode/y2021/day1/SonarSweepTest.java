@@ -1,4 +1,4 @@
-package com.stephan.adventofcode.days.day1;
+package com.stephan.adventofcode.y2021.day1;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

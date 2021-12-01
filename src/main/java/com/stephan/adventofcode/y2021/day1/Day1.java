@@ -1,12 +1,17 @@
-package com.stephan.adventofcode.days.day1;
+package com.stephan.adventofcode.y2021.day1;
 
-import com.stephan.adventofcode.days.Day;
+import com.stephan.adventofcode.DailyChallenge;
 
-public class Day1 implements Day {
+public class Day1 implements DailyChallenge {
   private final SonarSweep sweep;
 
   public Day1() {
     sweep = new SonarSweep();
+  }
+
+  @Override
+  public int year() {
+    return 2021;
   }
 
   @Override

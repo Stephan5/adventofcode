@@ -1,4 +1,4 @@
-package com.stephan.adventofcode.days.day1;
+package com.stephan.adventofcode.y2021.day1;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -70,7 +70,7 @@ class SonarSweep {
   }
 
   private static List<Integer> getInput() {
-    try (InputStream stream = SonarSweep.class.getResourceAsStream("/day1/input.txt")) {
+    try (InputStream stream = SonarSweep.class.getResourceAsStream("/y2021/day1/input.txt")) {
       assert stream != null;
       byte[] bytes = stream.readAllBytes();
       return Arrays.stream(new String(bytes).split("\\n")).map(Integer::parseInt).toList();
