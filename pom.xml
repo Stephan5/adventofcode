@@ -5,9 +5,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.stephan</groupId>
-  <artifactId>adventofcode2021</artifactId>
-  <name>Advent of Code 2021</name>
-  <packaging>pom</packaging>
+  <artifactId>adventofcode</artifactId>
+  <name>Advent of Code</name>
+  <packaging>jar</packaging>
   <version>0-SNAPSHOT</version>
 
   <properties>
@@ -20,5 +20,36 @@
   </properties>
 
   <dependencies>
+
+    <!-- Test Deps -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.assertj</groupId>
+      <artifactId>assertj-core</artifactId>
+      <version>${assertj.version}</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>3.2.0</version>
+      </plugin>
+    </plugins>
+  </build>
 </project>
