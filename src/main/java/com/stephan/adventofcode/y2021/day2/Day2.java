@@ -15,12 +15,12 @@ public class Day2 implements DailyChallenge {
   }
 
   @Override
-  public int part1Result() {
+  public long part1Result() {
     return 0;
   }
 
   @Override
-  public int part2Result() {
+  public long part2Result() {
     return 0;
   }
 }

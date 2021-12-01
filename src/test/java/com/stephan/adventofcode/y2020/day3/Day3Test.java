@@ -1,17 +1,17 @@
-package com.stephan.adventofcode.y2020.day2;
+package com.stephan.adventofcode.y2020.day3;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class Day2Test {
+class Day3Test {
 
-  private Day2 underTest;
+  private Day3 underTest;
 
   @BeforeEach
   void setUp() {
-    underTest = new Day2();
+    underTest = new Day3();
   }
 
   @Test
@@ -20,7 +20,7 @@ class Day2Test {
     long result = underTest.part1Result();
 
     // Then
-    assertThat(result).isEqualTo(2);
+    assertThat(result).isEqualTo(7);
   }
 
   @Test
@@ -29,6 +29,6 @@ class Day2Test {
     long result = underTest.part2Result();
 
     // Then
-    assertThat(result).isEqualTo(1);
+    assertThat(result).isEqualTo(336);
   }
 }

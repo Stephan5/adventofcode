@@ -20,7 +20,7 @@ public class Day1 implements DailyChallenge {
   }
 
   @Override
-  public int part1Result() {
+  public long part1Result() {
     List<Integer> expenses = getInputAsIntegerList();
     Set<Integer> exponents = new HashSet<>();
 
@@ -41,7 +41,7 @@ public class Day1 implements DailyChallenge {
   }
 
   @Override
-  public int part2Result() {
+  public long part2Result() {
     List<Integer> expenses = getInputAsIntegerList();
     Set<Integer> exponents = new HashSet<>();
 

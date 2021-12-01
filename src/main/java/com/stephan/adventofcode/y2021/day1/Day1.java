@@ -20,12 +20,12 @@ public class Day1 implements DailyChallenge {
   }
 
   @Override
-  public int part1Result() {
+  public long part1Result() {
     return sweep.countIncreases(getInputAsIntegerList());
   }
 
   @Override
-  public int part2Result() {
+  public long part2Result() {
     return sweep.countWindowedIncreases(getInputAsIntegerList());
   }
 }

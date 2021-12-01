@@ -9,7 +9,8 @@ public class Main {
 
   private static final List<Class<? extends DailyChallenge>> advent2020 = List.of(
       com.stephan.adventofcode.y2020.day1.Day1.class,
-      com.stephan.adventofcode.y2020.day2.Day2.class
+      com.stephan.adventofcode.y2020.day2.Day2.class,
+      com.stephan.adventofcode.y2020.day3.Day3.class
   );
 
   private static final List<Class<? extends DailyChallenge>> advent2021 = List.of(

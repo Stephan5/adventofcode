@@ -18,7 +18,7 @@ public class Day2 implements DailyChallenge {
   }
 
   @Override
-  public int part1Result() {
+  public long part1Result() {
     List<String> rawPasswordList = getInputAsStringList();
     AtomicInteger matchCount = new AtomicInteger();
 
@@ -35,7 +35,7 @@ public class Day2 implements DailyChallenge {
   }
 
   @Override
-  public int part2Result() {
+  public long part2Result() {
     List<String> rawPasswordList = getInputAsStringList();
     AtomicInteger matchCount = new AtomicInteger();
 

@@ -7,9 +7,9 @@ public interface DailyChallenge {
 
   int day();
 
-  int part1Result();
+  long part1Result();
 
-  int part2Result();
+  long part2Result();
 
   default String getInputString() {
     return InputService.getInput(year(), day());

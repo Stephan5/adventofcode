@@ -17,7 +17,7 @@ class Day1Test {
   @Test
   void canReturnPart1Result() {
     // When
-    int result = underTest.part1Result();
+    long result = underTest.part1Result();
 
     // Then
     assertThat(result).isEqualTo(514579);
@@ -26,7 +26,7 @@ class Day1Test {
   @Test
   void canReturnPart2Result() {
     // When
-    int result = underTest.part2Result();
+    long result = underTest.part2Result();
 
     // Then
     assertThat(result).isEqualTo(241861950);
