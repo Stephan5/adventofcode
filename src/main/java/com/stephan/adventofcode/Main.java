@@ -20,19 +20,21 @@ public class Main {
   );
 
   public static void main(String[] args) {
+    printHeader();
+    printResultsForYear(2020, advent2020);
+    printResultsForYear(2021, advent2021);
+  }
+
+  private static void printHeader() {
     System.out.println("----------------------------------------------");
     System.out.println("                Advent of Code                ");
     System.out.println("----------------------------------------------");
+  }
 
+  private static void printResultsForYear(int year, List<Class<? extends DailyChallenge>> classList) {
     System.out.println();
-    System.out.println("-------------------  2020  -------------------");
-
-    advent2020.forEach(Main::printResultsForDay);
-
-    System.out.println();
-    System.out.println("-------------------  2021  -------------------");
-
-    advent2021.forEach(Main::printResultsForDay);
+    System.out.println("-------------------  " + year + "  -------------------");
+    classList.forEach(Main::printResultsForDay);
   }
 
   private static void printResultsForDay(Class<? extends DailyChallenge> day) {
