@@ -27,24 +27,14 @@ public class Day2 implements DailyChallenge {
 
   private long calculatePositionAndMultiply(boolean complex) {
     List<String> rawInstructions = getInputAsStringList();
-
-    List<Instruction> instructions = parseInstructions(rawInstructions);
-
     Position position = new Position(complex);
 
-    instructions.forEach(position::applyInstruction);
+    rawInstructions
+        .stream()
+        .map(raw -> new Instruction(Direction.valueOf(raw.split(" ")[0].toUpperCase()), Integer.parseInt(raw.split(" ")[1])))
+        .forEach(position::applyInstruction);
 
     return position.multiplyPosition();
-  }
-
-  private List<Instruction> parseInstructions(List<String> rawInstructions) {
-    return rawInstructions
-        .stream()
-        .map(raw -> {
-          String[] splitInstruction = raw.split(" ");
-          return new Instruction(Direction.valueOf(splitInstruction[0].toUpperCase()), Integer.parseInt(splitInstruction[1]));
-        })
-        .toList();
   }
 
   private enum Direction {
