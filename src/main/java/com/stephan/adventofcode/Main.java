@@ -11,7 +11,8 @@ public class Main {
       com.stephan.adventofcode.y2020.day1.Day1.class,
       com.stephan.adventofcode.y2020.day2.Day2.class,
       com.stephan.adventofcode.y2020.day3.Day3.class,
-      com.stephan.adventofcode.y2020.day4.Day4.class
+      com.stephan.adventofcode.y2020.day4.Day4.class,
+      com.stephan.adventofcode.y2020.day5.Day5.class
   );
 
   private static final List<Class<? extends DailyChallenge>> advent2021 = List.of(
