@@ -2,6 +2,7 @@ package com.stephan.adventofcode;
 
 import com.stephan.adventofcode.y2021.day1.Day1;
 import com.stephan.adventofcode.y2021.day2.Day2;
+import com.stephan.adventofcode.y2021.day3.Day3;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
@@ -18,7 +19,8 @@ public class Main {
 
   private static final List<Class<? extends DailyChallenge>> advent2021 = List.of(
       Day1.class,
-      Day2.class
+      Day2.class,
+      Day3.class
   );
 
   public static void main(String[] args) {
