@@ -1,0 +1,36 @@
+package com.stephan.adventofcode.y2020.day10;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import com.stephan.adventofcode.y2020.day9.Day9;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+public class Day10Test {
+
+  private Day10 underTest;
+
+
+  @BeforeEach
+  void setUp() {
+    underTest = new Day10();
+  }
+
+  @Test
+  void canReturnPart1Result() {
+    // When
+    long result = underTest.part1Result();
+
+    // Then
+    assertThat(result).isEqualTo(220);
+  }
+
+  @Test
+  void canReturnPart2Result() {
+    // When
+    long result = underTest.part1Result();
+
+    // Then
+    assertThat(result).isEqualTo(62);
+  }
+}
