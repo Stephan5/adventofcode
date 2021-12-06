@@ -19,50 +19,44 @@ public class Day6 implements DailyChallenge {
   public long part1Result() {
     String inputString = getInputString();
     int[] lampfishList = parseInitialLampfishList(inputString);
-
-    int days = 80;
-
-    return simulateLampfishProcreation(lampfishList, days);
+    return simulateLampfishProcreation(lampfishList, 80);
   }
 
   @Override
   public long part2Result() {
     String inputString = getInputString();
     int[] lampfishList = parseInitialLampfishList(inputString);
-
-    int days = 256;
-
-    return simulateLampfishProcreation(lampfishList, days);
+    return simulateLampfishProcreation(lampfishList, 256);
   }
 
   private long simulateLampfishProcreation(int[] initialLampfish, int days) {
-    // So instead of representing each lampfish in an array, we represent the numbers of lampfish at each stage of procreation in the `procreationStage` array.
-    long[] procreationStage = new long[9];
+    // So instead of representing each lampfish in an array, we represent the numbers of lampfish at each stage of procreation in the `lifecycle` array.
+    long[] lifecycle = new long[9];
 
     for (int j : initialLampfish) {
-      procreationStage[j]++;
+      lifecycle[j]++;
     }
 
-    long births;
+    long gestationComplete;
 
     for (int i = 0; i < days; i++) {
-      // Set `births` to the number of fish at `0`
-      births = procreationStage[0];
+      // Set `gestationComplete` to the number of fish at `0`
+      gestationComplete = lifecycle[0];
       // Move each one position forward
-      procreationStage[0] = procreationStage[1];
-      procreationStage[1] = procreationStage[2];
-      procreationStage[2] = procreationStage[3];
-      procreationStage[3] = procreationStage[4];
-      procreationStage[4] = procreationStage[5];
-      procreationStage[5] = procreationStage[6];
+      lifecycle[0] = lifecycle[1];
+      lifecycle[1] = lifecycle[2];
+      lifecycle[2] = lifecycle[3];
+      lifecycle[3] = lifecycle[4];
+      lifecycle[4] = lifecycle[5];
+      lifecycle[5] = lifecycle[6];
       // After giving birth, existing fish are reset to position 6
-      procreationStage[6] = births + procreationStage[7];
-      procreationStage[7] = procreationStage[8];
-      // New births are set to position 8
-      procreationStage[8] = births;
+      lifecycle[6] = gestationComplete + lifecycle[7];
+      lifecycle[7] = lifecycle[8];
+      // Newly born fish are set to position 8
+      lifecycle[8] = gestationComplete;
     }
 
-    return Arrays.stream(procreationStage).sum();
+    return Arrays.stream(lifecycle).sum();
   }
 
   private int[] parseInitialLampfishList(String inputString) {
