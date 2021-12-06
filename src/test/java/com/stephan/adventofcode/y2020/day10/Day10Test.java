@@ -28,9 +28,9 @@ public class Day10Test {
   @Test
   void canReturnPart2Result() {
     // When
-    long result = underTest.part1Result();
+    long result = underTest.part2Result();
 
     // Then
-    assertThat(result).isEqualTo(62);
+    assertThat(result).isEqualTo(19208);
   }
 }
