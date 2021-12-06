@@ -5,6 +5,7 @@ import com.stephan.adventofcode.y2021.day2.Day2;
 import com.stephan.adventofcode.y2021.day3.Day3;
 import com.stephan.adventofcode.y2021.day4.Day4;
 import com.stephan.adventofcode.y2021.day5.Day5;
+import com.stephan.adventofcode.y2021.day6.Day6;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
@@ -24,7 +25,8 @@ public class Main {
       Day2.class,
       Day3.class,
       Day4.class,
-      Day5.class
+      Day5.class,
+      Day6.class
   );
 
   public static void main(String[] args) {
