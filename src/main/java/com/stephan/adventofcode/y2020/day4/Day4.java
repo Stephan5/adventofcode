@@ -8,7 +8,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Day4 implements DailyChallenge {
+public class Day4 extends DailyChallenge {
 
   private static final String BIRTH_YEAR = "byr";
   private static final String ISSUE_YEAR = "iyr";
@@ -19,14 +19,8 @@ public class Day4 implements DailyChallenge {
   private static final String PASSPORT_ID = "pid";
   private static final String COUNTRY_ID = "cid";
 
-  @Override
-  public int year() {
-    return 2020;
-  }
-
-  @Override
-  public int day() {
-    return 4;
+  public Day4() {
+    super(2020, 4);
   }
 
   @Override

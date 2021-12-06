@@ -3,16 +3,10 @@ package com.stephan.adventofcode.y2021.day2;
 import com.stephan.adventofcode.DailyChallenge;
 import java.util.List;
 
-public class Day2 implements DailyChallenge {
+public class Day2 extends DailyChallenge {
 
-  @Override
-  public int year() {
-    return 2021;
-  }
-
-  @Override
-  public int day() {
-    return 2;
+  public Day2() {
+    super(2021, 2);
   }
 
   @Override

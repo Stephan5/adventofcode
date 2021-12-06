@@ -54,7 +54,7 @@ public class Main {
     try {
       DailyChallenge dailyChallenge = day.getDeclaredConstructor().newInstance();
       System.out.println();
-      System.out.printf("Day %s%n", dailyChallenge.day());
+      System.out.printf("Day %s%n", dailyChallenge.getDay());
       System.out.println("------");
       System.out.println("Part 1 answer -> " + dailyChallenge.part1Result());
       System.out.println("Part 2 answer -> " + dailyChallenge.part2Result());

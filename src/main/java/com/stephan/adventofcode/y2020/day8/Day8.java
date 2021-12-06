@@ -6,16 +6,10 @@ import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Day8 implements DailyChallenge {
+public class Day8 extends DailyChallenge {
 
-  @Override
-  public int year() {
-    return 2020;
-  }
-
-  @Override
-  public int day() {
-    return 8;
+  public Day8() {
+    super(2020, 8);
   }
 
   @Override

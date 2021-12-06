@@ -5,18 +5,12 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class Day1 implements DailyChallenge {
+public class Day1 extends DailyChallenge {
 
   private static final int TARGET = 2020;
 
-  @Override
-  public int year() {
-    return 2020;
-  }
-
-  @Override
-  public int day() {
-    return 1;
+  public Day1() {
+    super(2020, 1);
   }
 
   @Override

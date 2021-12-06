@@ -7,16 +7,10 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.function.Function;
 
-public class Day9 implements DailyChallenge {
+public class Day9 extends DailyChallenge {
 
-  @Override
-  public int year() {
-    return 2020;
-  }
-
-  @Override
-  public int day() {
-    return 9;
+  public Day9() {
+    super(2020, 9);
   }
 
   @Override

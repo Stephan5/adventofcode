@@ -10,19 +10,12 @@ import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
-public class Day7 implements DailyChallenge {
+public class Day7 extends DailyChallenge {
 
   private static final String SHINY_GOLD = "shiny gold";
 
-
-  @Override
-  public int year() {
-    return 2020;
-  }
-
-  @Override
-  public int day() {
-    return 7;
+  public Day7() {
+    super(2020, 7);
   }
 
   @Override

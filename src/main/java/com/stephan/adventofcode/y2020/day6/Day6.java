@@ -8,18 +8,12 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Day6 implements DailyChallenge {
+public class Day6 extends DailyChallenge {
 
   private static final Set<String> fullAlphabet = Set.of("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z");
 
-  @Override
-  public int year() {
-    return 2020;
-  }
-
-  @Override
-  public int day() {
-    return 6;
+  public Day6() {
+    super(2020, 6);
   }
 
   @Override

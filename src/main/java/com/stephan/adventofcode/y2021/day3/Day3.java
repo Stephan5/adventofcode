@@ -7,16 +7,10 @@ import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class Day3 implements DailyChallenge {
+public class Day3 extends DailyChallenge {
 
-  @Override
-  public int year() {
-    return 2021;
-  }
-
-  @Override
-  public int day() {
-    return 3;
+  public Day3() {
+    super(2021, 3);
   }
 
   @Override

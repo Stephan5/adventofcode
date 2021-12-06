@@ -8,16 +8,10 @@ import java.util.function.Function;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-public class Day5 implements DailyChallenge {
+public class Day5 extends DailyChallenge {
 
-  @Override
-  public int year() {
-    return 2020;
-  }
-
-  @Override
-  public int day() {
-    return 5;
+  public Day5() {
+    super(2020, 5);
   }
 
   @Override
@@ -53,7 +47,7 @@ public class Day5 implements DailyChallenge {
     }
 
     if (seatCandidates.size() != 1) {
-      throw new IllegalStateException("Couldn't find seat. Found " + seatCandidates.size() + "candidates!");
+      throw new IllegalStateException("Couldn't find seat. Found " + seatCandidates.size() + " candidates!");
     }
 
     return seatCandidates.get(0);

@@ -5,16 +5,10 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Stream;
 
-public class Day2 implements DailyChallenge {
+public class Day2 extends DailyChallenge {
 
-  @Override
-  public int year() {
-    return 2020;
-  }
-
-  @Override
-  public int day() {
-    return 2;
+  public Day2() {
+    super(2020, 2);
   }
 
   @Override

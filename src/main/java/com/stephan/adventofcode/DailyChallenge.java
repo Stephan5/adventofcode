@@ -2,25 +2,34 @@ package com.stephan.adventofcode;
 
 import java.util.List;
 
-public interface DailyChallenge {
-  int year();
+public abstract class DailyChallenge {
 
-  int day();
+  private final int year;
+  private final int day;
 
-  long part1Result();
-
-  long part2Result();
-
-  default String getInputString() {
-    return InputService.getInput(year(), day());
+  protected DailyChallenge(int year, int day) {
+    this.year = year;
+    this.day = day;
   }
 
-  default List<Integer> getInputAsIntegerList() {
-    return InputService.getInputAsIntegerList(year(), day());
+  public int getDay() {
+    return day;
   }
 
-  default List<String> getInputAsStringList() {
-    return InputService.getInputAsStringList(year(), day());
+  abstract public long part1Result();
+
+  abstract public long part2Result();
+
+  public String getInputString() {
+    return InputService.getInput(year, day);
+  }
+
+  public List<Integer> getInputAsIntegerList() {
+    return InputService.getInputAsIntegerList(year, day);
+  }
+
+  public List<String> getInputAsStringList() {
+    return InputService.getInputAsStringList(year, day);
   }
 
 }
