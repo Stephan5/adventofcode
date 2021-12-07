@@ -23,7 +23,6 @@ public class Day7 extends DailyChallenge {
     return getTotalFuelRequired(true);
   }
 
-
   private Integer getTotalFuelRequired(boolean useCrabEngineeringPrinciples) {
     List<Integer> crabPositions = getSingleLineCsvIntegerInputAsIntegerList();
 
