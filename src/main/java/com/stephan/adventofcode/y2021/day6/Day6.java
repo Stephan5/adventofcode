@@ -11,15 +11,13 @@ public class Day6 extends DailyChallenge {
 
   @Override
   public long part1Result() {
-    String inputString = getInputString();
-    int[] lampfishList = parseInitialLampfishList(inputString);
+    int[] lampfishList = parseInitialLampfishList();
     return simulateLampfishProcreation(lampfishList, 80);
   }
 
   @Override
   public long part2Result() {
-    String inputString = getInputString();
-    int[] lampfishList = parseInitialLampfishList(inputString);
+    int[] lampfishList = parseInitialLampfishList();
     return simulateLampfishProcreation(lampfishList, 256);
   }
 
@@ -53,11 +51,10 @@ public class Day6 extends DailyChallenge {
     return Arrays.stream(lifecycle).sum();
   }
 
-  private int[] parseInitialLampfishList(String inputString) {
-    String removedNewLines = inputString.replace("\n", "");
-
-    return Arrays.stream(removedNewLines.split(","))
-        .mapToInt(Integer::parseInt)
+  private int[] parseInitialLampfishList() {
+    return getSingleLineCsvIntegerInputAsIntegerList()
+        .stream()
+        .mapToInt(Integer::intValue)
         .toArray();
   }
 }

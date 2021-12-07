@@ -23,6 +23,11 @@ public class InputService {
     return Arrays.stream(string.split("\\n")).map(Integer::parseInt).toList();
   }
 
+  static List<Integer> getSingleLineCsvIntegerInputAsIntegerList(int year, int day) {
+    String string = getInput(year, day);
+    return Arrays.stream(string.replaceAll("\\n", "").split(",")).map(Integer::parseInt).toList();
+  }
+
   static List<String> getInputAsStringList(int year, int day) {
     String string = getInput(year, day);
     return Arrays.stream(string.split("\\n")).toList();

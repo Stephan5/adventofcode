@@ -25,7 +25,7 @@ public class Day7 extends DailyChallenge {
 
 
   private Integer getTotalFuelRequired(boolean useCrabEngineeringPrinciples) {
-    List<Integer> crabPositions = parseCrabPositions();
+    List<Integer> crabPositions = getSingleLineCsvIntegerInputAsIntegerList();
 
     int minCrab = crabPositions.stream().min(Comparator.comparing(Function.identity())).orElseThrow();
     int maxCrab = crabPositions.stream().max(Comparator.comparing(Function.identity())).orElseThrow();
@@ -58,11 +58,6 @@ public class Day7 extends DailyChallenge {
     }
 
     return fuelSums.stream().min(Comparator.comparing(Function.identity())).orElseThrow();
-  }
-
-  private List<Integer> parseCrabPositions() {
-    String input = getInputString().replaceAll("\\n", "");
-    return Arrays.stream(input.split(",")).map(Integer::parseInt).toList();
   }
 
   private int getCrabFuelCalculation(int distance) {

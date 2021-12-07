@@ -28,6 +28,10 @@ public abstract class DailyChallenge {
     return InputService.getInputAsIntegerList(year, day);
   }
 
+  public List<Integer> getSingleLineCsvIntegerInputAsIntegerList() {
+    return InputService.getSingleLineCsvIntegerInputAsIntegerList(year, day);
+  }
+
   public List<String> getInputAsStringList() {
     return InputService.getInputAsStringList(year, day);
   }
