@@ -2,16 +2,10 @@
 
 import com.stephan.adventofcode.DailyChallenge;
 
-public class Day${DAY_NUMBER} implements DailyChallenge {
+public class Day${DAY_NUMBER} extends DailyChallenge {
 
-  @Override
-  public int year() {
-    return ${YEAR_NUMBER};
-  }
-
-  @Override
-  public int day() {
-    return ${DAY_NUMBER};
+  public Day${DAY_NUMBER}() {
+    super(${YEAR_NUMBER}, ${DAY_NUMBER});
   }
 
   @Override
