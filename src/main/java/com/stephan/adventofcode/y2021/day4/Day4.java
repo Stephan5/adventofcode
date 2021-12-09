@@ -1,5 +1,7 @@
 package com.stephan.adventofcode.y2021.day4;
 
+import static com.stephan.adventofcode.Utility.transpose;
+
 import com.stephan.adventofcode.DailyChallenge;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -144,19 +146,6 @@ public class Day4 extends DailyChallenge {
     }
 
     return false;
-  }
-
-  static <T> List<List<T>> transpose(List<List<T>> table) {
-    List<List<T>> transposed = new ArrayList<>();
-    int rowSize = table.get(0).size();
-    for (int i = 0; i < rowSize; i++) {
-      List<T> col = new ArrayList<>();
-      for (List<T> row : table) {
-        col.add(row.get(i));
-      }
-      transposed.add(col);
-    }
-    return transposed;
   }
 
   static class BingoBoard {
