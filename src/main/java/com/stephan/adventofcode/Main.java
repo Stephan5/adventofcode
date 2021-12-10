@@ -1,6 +1,7 @@
 package com.stephan.adventofcode;
 
 import com.stephan.adventofcode.y2021.day1.Day1;
+import com.stephan.adventofcode.y2021.day10.Day10;
 import com.stephan.adventofcode.y2021.day2.Day2;
 import com.stephan.adventofcode.y2021.day3.Day3;
 import com.stephan.adventofcode.y2021.day4.Day4;
@@ -36,7 +37,8 @@ public class Main {
       Day6.class,
       Day7.class,
       Day8.class,
-      Day9.class
+      Day9.class,
+      Day10.class
   );
 
   public static void main(String[] args) {
